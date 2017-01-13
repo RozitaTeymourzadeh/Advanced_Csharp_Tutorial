@@ -38,6 +38,7 @@ namespace Mod01Demo04
             Console.WriteLine(result);
             #endregion
 
+            #region DataManipulation
             string data = "First Number";
             data += "\n \r Second Number";
             data += @"\n Third Number \\...";
