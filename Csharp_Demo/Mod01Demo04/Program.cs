@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using Mod01Demo04.GreetingNamespace;
 
 
 
@@ -163,6 +161,12 @@ namespace Mod01Demo04
             {
                 Console.WriteLine(emp);
             }
+            #endregion
+
+            #region Referencing NameSpaces
+            bool fileExit = System.IO.File.Exists(@"c:\Test.txt");
+            DemoGreetingClass gr = new DemoGreetingClass();
+            Console.WriteLine(gr.Greetingmethod());
             #endregion
             Console.WriteLine("Done!");
             Console.ReadLine();
