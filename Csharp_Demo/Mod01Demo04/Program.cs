@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Mod01Demo04
@@ -33,8 +34,8 @@ namespace Mod01Demo04
             c = (int)h;//Explicity casting
             string sDate = "01/01/2015";
             DateTime dt1 = DateTime.Parse(sDate);
-            string result = dt.ToString();
-            Console.WriteLine(dt);
+            string result = dt1.ToString();
+            Console.WriteLine(dt1);
             Console.WriteLine(result);
             #endregion
 
@@ -43,7 +44,7 @@ namespace Mod01Demo04
             data += "\n \r Second Number";
             data += @"\n Third Number \\...";
             Console.WriteLine(data);
-
+            //same code in top and down, different way of implementation. 
             string data1;
             StringBuilder sb = new StringBuilder();
             sb.Append("\t First Number");
@@ -53,7 +54,16 @@ namespace Mod01Demo04
             Console.WriteLine(data1.ToUpper());
 
             string formatted = string.Format("Demo: {0} \n {1}",dt,data1);
-            Console.WriteLine(formatted);
+           // Console.WriteLine(formatted);
+
+            string Test_Text = "Hell0 W0rld!";
+            string re = "\\d";
+            var r = Regex.Match(Test_Text, re, RegexOptions.None);
+            if(r.Success)
+            {
+                Console.WriteLine("Match");
+            }
+
 
 
             #endregion
