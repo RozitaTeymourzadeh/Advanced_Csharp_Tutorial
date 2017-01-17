@@ -27,7 +27,6 @@ namespace Mod01Demo04
             Console.WriteLine(J);
             Console.WriteLine(S);
             #endregion
-
             #region Casting
             int c = 10;
             long h = c * 10;//Implicity casting
@@ -38,7 +37,6 @@ namespace Mod01Demo04
             Console.WriteLine(dt1);
             Console.WriteLine(result);
             #endregion
-
             #region DataManipulation
             string data = "First Number";
             data += "\n \r Second Number";
@@ -129,7 +127,6 @@ namespace Mod01Demo04
 
 
             #endregion
-
             #region String
             string[] names = new string[5];
             names[0] = "Bob0";
@@ -162,12 +159,12 @@ namespace Mod01Demo04
                 Console.WriteLine(emp);
             }
             #endregion
-
-            #region Referencing NameSpaces
+            #region Referencing NameSpaces_nameSpace_Class/object_Method
             bool fileExit = System.IO.File.Exists(@"c:\Test.txt");
             DemoGreetingClass gr = new DemoGreetingClass();
             Console.WriteLine(gr.Greetingmethod());
             #endregion
+
             Console.WriteLine("Done!");
             Console.ReadLine();
         }
