@@ -1,0 +1,18 @@
+﻿<Window x:Class="Mod02Demo01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mod02Demo01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox x:Name="customerList" HorizontalAlignment="Left" Height="258" Margin="0,53,0,0" VerticalAlignment="Top" Width="249" SelectionChanged="customerList_SelectionChanged_1"/>
+        <TextBlock x:Name="details" HorizontalAlignment="Left" Margin="254,53,0,-0.2" TextWrapping="Wrap" VerticalAlignment="Top" Height="268" Width="264"/>
+        <Button x:Name="overloaded" Content="Overloaded  Parameter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="48" Click="overloaded_Click_1" Margin="5,0,0,0"/>
+        <Button x:Name="optional" Content="Optional  Parameter" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Top" Width="135" Height="48" Click="optional_Click_1"/>
+        <Button x:Name="named" Content="Named Parameter" HorizontalAlignment="Left" Margin="280,0,0,0" VerticalAlignment="Top" Width="122" Height="48" Click="named_Click_1"/>
+        <Button x:Name="output" Content="Output parameter" HorizontalAlignment="Left" Margin="407,0,0,0" VerticalAlignment="Top" Width="111" Height="48" Click="output_Click_1"/>
+
+    </Grid>
+</Window>
