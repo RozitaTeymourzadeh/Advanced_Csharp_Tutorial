@@ -9,7 +9,7 @@ namespace Mod01Demo04
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)//Method encapsulate operation tp protect data
         {
             #region Variables
             int I;
