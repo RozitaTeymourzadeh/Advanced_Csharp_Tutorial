@@ -32,14 +32,25 @@ namespace Mod03Demo01 // Suould be the same Name with Customer namespace, so it 
         }
         private void Struct_Click_1(object sender, RoutedEventArgs e)
         {
-            Customer cust = new Customer();// needs to be changed from "Customer cust;" to "Customer cust = new Customer();" because Name from struct Field concerted to Struct 
-            cust.ID = nextID++;
-            cust.Name = customerName.Text;
-            cust.Status = CustomerStatusEnum.Gold;
-            cust.Email = cust.Name + "@cust.com";
-            CustomerList.Items.Add(cust);
+            /* the lines commented to implement it using constructor */
+            //Customer cust = new Customer();// needs to be changed from "Customer cust;" to "Customer cust = new Customer();" because Name from struct Field concerted to Struct 
+            //cust.ID = nextID++;
+            //cust.Name = customerName.Text;
+            //cust.Status = CustomerStatusEnum.Gold;
+            //cust.Email = cust.Name + "@cust.com";
+            //CustomerList.Items.Add(cust);
+
+            CustomerList.Items.Add(new Customer(nextID++, customerName.Text + "@cust.com", CustomerStatusEnum.Gold, customerName.Text));// constructor
         }
 
-
+        private void collection_Click(object sender, RoutedEventArgs e)
+        {
+            var util = new Utilities();
+            var customers = util.GetCustomers();
+            foreach (Customer cust in customers)
+            {
+                CustomerList.Items.Add(cust);
+            }
+        }
     }
 }

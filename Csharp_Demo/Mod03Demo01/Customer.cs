@@ -4,9 +4,11 @@
     {
         private string _name;// Field (backing variable for Name Property)
         private string _email;
+        private int _id;
+        private CustomerStatusEnum _status;
 
-        public int ID { get; set; }//created using "prob+tab+tab"
-        public CustomerStatusEnum Status { get; set; }
+        //public int ID { get; set; }//created using "prob+tab+tab"
+        //public CustomerStatusEnum Status { get; set; }
         public string Name // Property
         {
             get
@@ -32,6 +34,38 @@
                 //validation
                 _email = value;
             }
+        }
+        public int ID
+        {
+            get
+            {
+                return _id;
+            }
+
+            set
+            {
+                _id = value;
+            }
+        }
+        public CustomerStatusEnum Status
+        {
+            get
+            {
+                return _status;
+            }
+
+            set
+            {
+                _status = value;
+            }
+        }
+
+        public Customer(int ID, string Email, CustomerStatusEnum Status, string Name)// Constructor
+        {
+            _name = Name;
+            _email = Email;
+            _id = ID;
+            _status = Status;
         }
 
         public string Details()
