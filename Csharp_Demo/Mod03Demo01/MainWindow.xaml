@@ -1,0 +1,17 @@
+﻿<Window x:Class="Mod03Demo01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mod03Demo01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" Text="Customer" VerticalAlignment="Top" Width="200"/>
+        <ListBox x:Name="CustomerList" HorizontalAlignment="Left" Height="226" Margin="0,90,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="CustomerList_SelectionChanged"/>
+        <Button x:Name="Struct" Content="Add a Struct" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Width="200" Height="22" Click="Struct_Click_1"/>
+        <TextBlock x:Name="details" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="200,68,0,-0.2" Height="253" Width="318"/>
+        <TextBox x:Name="customerName" HorizontalAlignment="Left" Height="40" Margin="0,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+
+    </Grid>
+</Window>
