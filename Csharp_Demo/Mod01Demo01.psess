@@ -38,7 +38,7 @@
     <ProjBinary>
       <Path>Mod01Demo01\obj\Debug\Mod01Demo01.exe</Path>
       <ArgumentTimestamp>01/01/0001 00:00:00</ArgumentTimestamp>
-      <Instrument>true</Instrument>
+      <Instrument>false</Instrument>
       <Sample>true</Sample>
       <ExternalWebsite>false</ExternalWebsite>
       <InteractionProfilingEnabled>false</InteractionProfilingEnabled>

@@ -27,8 +27,21 @@ namespace Mod03Demo01 // Suould be the same Name with Customer namespace, so it 
         }
         private void CustomerList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (CustomerList.SelectedItem == null)// to fix null reference bug
+            {
+                return;
+            }
             Customer current = (Customer)CustomerList.SelectedItem;
-            details.Text= current.Details();
+            /*To show Hash Table */
+            var util = new Utilities();
+            var customers = util.GetCustomers2();
+            if (customers[current.Name] == null)// to fix null reference bug
+            {
+                return;
+            }
+            Customer cust = (Customer)customers[current.Name];//a way to access hash table collection key
+
+            details.Text= cust.Details();
         }
         private void Struct_Click_1(object sender, RoutedEventArgs e)
         {
@@ -45,12 +58,36 @@ namespace Mod03Demo01 // Suould be the same Name with Customer namespace, so it 
 
         private void collection_Click(object sender, RoutedEventArgs e)
         {
+            /*To show  customer in array list collection*/
+            //var util = new Utilities();
+            //var customers = util.GetCustomers();
+            //foreach (Customer cust in customers)
+            //{
+            //    CustomerList.Items.Add(cust);
+            //}
+            /*To show  customer in Hash Table collection*/
             var util = new Utilities();
-            var customers = util.GetCustomers();
-            foreach (Customer cust in customers)
+            var customers = util.GetCustomers2();
+            foreach (Customer cust in customers.Values)
             {
                 CustomerList.Items.Add(cust);
             }
+        }
+
+        private void query_Click(object sender, RoutedEventArgs e)
+        {
+            var utils = new Utilities();
+            CustomerList.Items.Clear();
+            var customers = utils.GetCustomers();
+            var gold = from Customer c in customers
+                       where c.Status == CustomerStatusEnum.Silver
+                       orderby c.Name
+                       select c;
+            foreach(var customer in gold)
+            {
+                CustomerList.Items.Add(customer);
+            }
+
         }
     }
 }
