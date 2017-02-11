@@ -19,7 +19,7 @@ namespace Mod03Demo01
             return customers;
         }
 
-        public Hashtable GetCustomers2()
+        public Hashtable GetCustomers2()// Hash Table Collection type
         {
             Hashtable customers = new Hashtable();
             customers.Add("Roz", new Customer(1, "Rozita", CustomerStatusEnum.Silver, "roz@cust.com"));
