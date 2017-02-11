@@ -18,3 +18,8 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+Csharp_Demo/.vs/Csharp_Demo/v14/.suo
+Csharp_Demo/Mod01Demo01/obj/Debug/Mod01Demo01.csproj.FileListAbsolute.txt
+*.vsp
+*.suo
+*.suo
