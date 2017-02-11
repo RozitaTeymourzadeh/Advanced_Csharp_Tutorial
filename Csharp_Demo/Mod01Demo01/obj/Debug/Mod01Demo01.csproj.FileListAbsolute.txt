@@ -1,7 +1,6 @@
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\bin\Debug\Mod01Demo01.exe.config
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\bin\Debug\Mod01Demo01.exe
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\bin\Debug\Mod01Demo01.pdb
-C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.csprojResolveAssemblyReference.cache
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\MainWindow.g.cs
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\App.g.cs
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01_MarkupCompile.cache
@@ -12,3 +11,4 @@ C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanc
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.csproj.GenerateResource.Cache
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.exe
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.pdb
+C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.csprojResolveAssemblyReference.cache
