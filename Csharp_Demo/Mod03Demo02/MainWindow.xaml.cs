@@ -31,7 +31,7 @@ namespace Mod03Demo02
 
         private void Customer_NameChanged(object sender, EventArgs e)// Subscribe to event
         {
-            activity.Items.Add("Name Changed" + customer.Name);
+            activity.Items.Add("Name Changed " + customer.Name);
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
