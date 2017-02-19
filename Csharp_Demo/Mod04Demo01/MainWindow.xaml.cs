@@ -34,16 +34,18 @@ namespace Mod04Demo01
 
         private void constructors_Click(object sender, RoutedEventArgs e)
         {
-            customerList.Items.Add(new Customer(2,"Rozita"));
-            customerList.Items.Add(new Customer(3, "Anita",CustomerStatusEnum.Platinume,"ann@cust.com"));
-            customerList.Items.Add(new Customer(4, "Rozita"));
-
-
+            customerList.Items.Add(new Customer(100,"Rozita"));
+            customerList.Items.Add(new Customer("Anita", CustomerStatusEnum.Platinume, "ann@cust.com"));
+            customerList.Items.Add(new Customer(100,"Rozita"));
         }
+ 
 
         private void statics_Click(object sender, RoutedEventArgs e)
         {
-
+            foreach (Customer cust in Utilities.GetCustomers())
+            {
+                customerList.Items.Add(cust);
+            }
         }
     }
 }

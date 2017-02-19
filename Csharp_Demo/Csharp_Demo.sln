@@ -25,10 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mod04Demo01", "Mod04Demo01\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mod04Demo02", "Mod04Demo02\Mod04Demo02.csproj", "{08DD3BEF-84A1-4462-9147-93628C05D1E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{5EB2C435-9DD7-4E45-B2EE-C1F213505152}"
+EndProject
 Global
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -62,6 +61,10 @@ Global
 		{08DD3BEF-84A1-4462-9147-93628C05D1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08DD3BEF-84A1-4462-9147-93628C05D1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08DD3BEF-84A1-4462-9147-93628C05D1E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB2C435-9DD7-4E45-B2EE-C1F213505152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB2C435-9DD7-4E45-B2EE-C1F213505152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB2C435-9DD7-4E45-B2EE-C1F213505152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB2C435-9DD7-4E45-B2EE-C1F213505152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,5 +77,6 @@ Global
 		{8053B5C8-616B-4166-9EEA-0129CE4B58F3} = {7BFEEB99-E2BA-40A4-8310-AB5E4D672BF6}
 		{D70DA374-BA0F-4EB2-91EB-880EB3583208} = {63D98EDF-5351-4AA0-B17F-CE3E800E35D4}
 		{08DD3BEF-84A1-4462-9147-93628C05D1E4} = {63D98EDF-5351-4AA0-B17F-CE3E800E35D4}
+		{5EB2C435-9DD7-4E45-B2EE-C1F213505152} = {63D98EDF-5351-4AA0-B17F-CE3E800E35D4}
 	EndGlobalSection
 EndGlobal

@@ -8,21 +8,21 @@ namespace Mod04Demo01
 {
     public class Customer
     {
+        private static int nextID = 1;
         public Customer()
         {
             // default Custome constructor
+            ID = nextID++;
         }
 
-        public Customer(int ID, string Name, CustomerStatusEnum Status, string Email)// constructor: to connect property to method parameter, constructor return Customer and there is no int or void etc
+        public Customer(string Name, CustomerStatusEnum Status, string Email):this()// constructor: to connect property to method parameter, constructor return Customer and there is no int or void etc
         {
-            this.ID = ID;
             this.Name = Name;
             this.Status = Status;
             this.Email = (Email==null? Name+"@cust.com":Email);
         }
         public Customer(int ID, string Name)// constructor: to connect property to method parameter
         {
-            this.ID = ID;
             this.Name = Name;
             this.Status = CustomerStatusEnum.Gold;
             this.Email = Name + "@cust.com";
