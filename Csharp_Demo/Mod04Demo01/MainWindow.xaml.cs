@@ -27,9 +27,28 @@ namespace Mod04Demo01
 
         private void customerList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(customerList.SelectedItem == null) { return; }
-            Customer current = (Customer)customerList.SelectedItem;//ListBox
-            details.Text = current.Details();//ToolBox
+            if(customerList.SelectedItem == null) return;
+            IDisplay current = customerList.SelectedItem as IDisplay;//ListBox
+            /*Option 1 using IDisplay*/
+            if (current != null)
+            {
+                details.Text = current.Details();
+            }
+            /*Option 2 */
+            //Customer cust = current as Customer; // "as" cast the current to customer type and return null if the object is not customer
+            //if (cust != null)
+            //{
+            //    details.Text = cust.Details();
+            //}
+            //else
+            //{
+            //    Prospect prosp = current as Prospect;
+            //    if(prosp != null)
+            //    {
+            //        details.Text = prosp.Details();
+            //    }
+            //}
+            // details.Text = current.Details();//ToolBox
         }
 
         private void constructors_Click(object sender, RoutedEventArgs e)
@@ -42,7 +61,7 @@ namespace Mod04Demo01
 
         private void statics_Click(object sender, RoutedEventArgs e)
         {
-            foreach (Customer cust in Utilities.GetCustomers())
+            foreach (object cust in Utilities.GetCustomers())// since cust could be "customer" or "prospect" we put object
             {
                 customerList.Items.Add(cust);
             }
