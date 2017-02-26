@@ -12,9 +12,12 @@ namespace Mod04Demo01
     {
         private static Customer cust;
 
-        public static ArrayList GetCustomers()
+        // public static ArrayList GetCustomers()// collection Array List 
+        public static List<IDisplay> GetCustomers()// Generic List  
+
         {
-            ArrayList customers = new ArrayList();
+            //ArrayList customers = new ArrayList();// collection Array List 
+            var customers = new List<IDisplay>();// Generic collection List  
             customers.Add(new Customer("Rozita", CustomerStatusEnum.Gold, "roz@cust.com"));
             customers.Add(new Customer("Ann", CustomerStatusEnum.Silver, "Ann@cust.com"));
             customers.Add(new Customer("Pan", CustomerStatusEnum.Gold, "pan@cust.com"));
@@ -27,21 +30,8 @@ namespace Mod04Demo01
         }
         public static Customer GetCustomer(int ID)
         {
-           // if (cust == null) { return ; }
-            if (ID == 5)
-            {
-                Customer cust = new Customer("Rozita", CustomerStatusEnum.Gold, "roz@cust.com");
-            }
-            else
-            { 
-                Customer cust = new Customer("Ann", CustomerStatusEnum.Silver, "Ann@cust.com");
-            }
-            return cust;
-#pragma warning disable CS0162 // Unreachable code detected
-            Console.Write(ID);
-#pragma warning restore CS0162 // Unreachable code detected
-            Console.ReadLine();
-
+            var custs = GetCustomers().Cast<Customer>();
+            return custs.First(c => c.ID == ID);
         }
     }
 }
