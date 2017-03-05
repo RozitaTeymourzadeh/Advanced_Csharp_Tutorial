@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Csharp_Demo.Properties
+namespace Mod05Demo01.Properties
 {
 
 

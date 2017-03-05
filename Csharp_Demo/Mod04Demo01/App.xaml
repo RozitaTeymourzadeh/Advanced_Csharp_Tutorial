@@ -1,7 +1,7 @@
-﻿<Application x:Class="Csharp_Demo.App"
+﻿<Application x:Class="Mod05Demo01.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Csharp_Demo"
+             xmlns:local="clr-namespace:Mod05Demo01"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
