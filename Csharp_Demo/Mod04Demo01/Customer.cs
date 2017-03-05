@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mod04Demo01
+namespace Mod05Demo01
 {
     public class Customer:IDisplay, IComparable//right click on IDisplay and select implement interface
     {

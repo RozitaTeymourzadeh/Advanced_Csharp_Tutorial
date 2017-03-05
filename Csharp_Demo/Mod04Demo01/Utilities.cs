@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mod04Demo01
+namespace Mod05Demo01
 {
 
     public static class Utilities// Allmembers of static class must be static type
