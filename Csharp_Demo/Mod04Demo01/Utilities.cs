@@ -28,7 +28,7 @@ namespace Mod05Demo01
             customers.Sort();
             return customers;
         }
-        public static Customer GetCustomer(int ID)
+        public static Customer GetCustomers(int ID)
         {
             var custs = GetCustomers().Cast<Customer>();
             return custs.First(c => c.ID == ID);
