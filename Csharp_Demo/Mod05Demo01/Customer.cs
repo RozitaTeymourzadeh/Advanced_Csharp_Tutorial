@@ -12,7 +12,7 @@ namespace Mod05Demo01
         public override string Details()
        /* Method must have return, virtual type is to be able to overwrite by class that is inheritted to this base class*/
         {
-            return string.Format("Person {0}\n{1}\n{2}\n{3}", ID, Name, Status,Email);
+            return string.Format("Person {0}\n{1}\n{2}\n{3}\n{4}", ID, Name, Status,Email,Notes);
         }
     }
     public class Prospect:Person

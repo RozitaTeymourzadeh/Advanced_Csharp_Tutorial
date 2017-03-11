@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Mod05Demo01
 {
 
-    public static class Utilities// Allmembers of static class must be static type
+    public static class Utilities// All members of static class must be static type
     {
 
         public static List<Person> GetCustomers()// Generic List  
@@ -25,5 +25,15 @@ namespace Mod05Demo01
             return customers;
             
         }
+        public static string TitleCase(this string input) // we use "this" to tell to compiler about this extension method means object.extension method()
+        {
+            string[] words = input.Split(' ');
+            for (int lcv = 0; lcv < words.Length; lcv++)
+            {
+                words[lcv] = words[lcv].Substring(0, 1).ToUpper() + words[lcv].Substring(1).ToLower();
+            }
+            return string.Join(" ", words);
+        } 
+
     }
 }
