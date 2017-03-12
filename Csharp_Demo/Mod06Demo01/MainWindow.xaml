@@ -1,0 +1,19 @@
+﻿<Window x:Class="Mod06Demo01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mod06Demo01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="ADD" Content="ADD" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.061,-0.506" Height="50" Margin="19,9,0,0" Click="ADD_Click"/>
+        <Button x:Name="SAVE" Content="SAVE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.061,-0.506" Height="50" Margin="115,9,0,0" Click="SAVE_Click"/>
+        <Button x:Name="LOAD" Content="LOAD" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.061,-0.506" Height="50" Margin="211,9,0,0" Click="LOAD_Click"/>
+        <Button x:Name="SAVE_ALL" Content="SAVE ALL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.061,-0.506" Height="50" Margin="307,9,0,0" Click="SAVE_ALL_Click"/>
+        <Button x:Name="LOAD_ALL" Content="LOAD ALL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.061,-0.506" Height="50" Margin="403,9,0,0" Click="LOAD_ALL_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="64" Margin="0,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="518" TextChanged="textBox_TextChanged"/>
+        <ListBox x:Name="display" HorizontalAlignment="Left" Height="188" Margin="0,133,0,-0.2" VerticalAlignment="Top" Width="518" SelectionChanged="listBox_SelectionChanged"/>
+
+    </Grid>
+</Window>
