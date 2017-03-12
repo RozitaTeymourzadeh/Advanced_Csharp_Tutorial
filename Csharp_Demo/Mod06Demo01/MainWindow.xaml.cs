@@ -38,19 +38,32 @@ namespace Mod06Demo01
             textBox.Focus();
 
         }
-
+        private void verifyPath(string fileName)
+        {
+            string dirPath = System.IO.Path.GetDirectoryName(fileName);
+            if(!Directory.Exists(dirPath))
+            {
+                Directory.CreateDirectory(dirPath);
+            }
+        }
         private void SAVE_Click(object sender, RoutedEventArgs e)
         {
+            verifyPath(textFile);
             File.WriteAllText(textFile,textBox.Text); 
         }
 
         private void LOAD_Click(object sender, RoutedEventArgs e)
         {
-            textBox.Text = File.ReadAllText(textFile);
+            verifyPath(textFile);
+            if (File.Exists(textFile))
+            {
+                textBox.Text = File.ReadAllText(textFile);
+            }
         }
 
         private void SAVE_ALL_Click(object sender, RoutedEventArgs e)
         {
+            verifyPath(textFile);
             File.WriteAllLines(linesFile, items);
         }
 
