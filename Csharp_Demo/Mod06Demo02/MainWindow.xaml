@@ -1,0 +1,17 @@
+﻿<Window x:Class="Mod06Demo02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mod06Demo02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="Generate" Content="Generate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Height="38" Click="Generate_Click"/>
+        <Button x:Name="Load" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Height="38" Margin="130,0,0,0" Click="Load_Click"/>
+        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Height="38" Margin="260,0,0,0" Click="Save_Click"/>
+        <Button x:Name="Clear" Content=" Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Height="38" RenderTransformOrigin="1.971,0.407" Margin="390,0,0,0" Click="Clear_Click"/>
+        <ListBox x:Name="customerList" HorizontalAlignment="Left" Height="283" Margin="0,38,0,-0.2" VerticalAlignment="Top" Width="258" SelectionChanged="customerList_SelectionChanged"/>
+        <TextBlock x:Name="details" HorizontalAlignment="Left" Margin="258,38,0,-0.2" TextWrapping="Wrap" VerticalAlignment="Top" Height="283" Width="260"/>
+    </Grid>
+</Window>

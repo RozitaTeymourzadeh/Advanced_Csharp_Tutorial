@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mod06Demo02
 {
+    [Serializable]
     public class Customer:Person
     {
         public CustomerStatusEnum Status { get; set; }
@@ -15,6 +16,7 @@ namespace Mod06Demo02
             return string.Format("Person {0}\n{1}\n{2}\n{3}\n{4}", ID, Name, Status,Email,Notes);
         }
     }
+    [Serializable]
     public class Prospect:Person
     {
         public string PostalCode { get; set; }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 /*Inspite of ArrayList, Generic are dynamic collection. No. of cells is not static */
 /*Creating Enumerable Collection*/
-namespace Mod05Demo01//Create class, inherite it to generic IList , right click and select implement implicity to get IList properties 
+namespace Mod06Demo02//Create class, inherite it to generic IList , right click and select implement implicity to get IList properties 
 {
     class CustomerList : IList<Customer>// <> shows generic collection
     {

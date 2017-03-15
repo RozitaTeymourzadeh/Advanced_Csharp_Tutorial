@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Mod05Demo01
+namespace Mod06Demo02
 {
     /// <summary>
     /// Interaction logic for App.xaml

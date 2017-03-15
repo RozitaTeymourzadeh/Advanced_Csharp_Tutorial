@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 */
 namespace Mod06Demo02
 {
-    [Serializable]
     public abstract class Person:IComparable<Person> /*Base Class, can be defined as sealed, abstract and virtual, Icomparable is to sort Person member by name alphabetically */
     {
         protected static int nextID = 1;//field should be changed from private to protected to be able to inherite to other classes 
