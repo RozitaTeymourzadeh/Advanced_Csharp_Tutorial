@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Mod05Demo01
+namespace Mod06Demo02
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

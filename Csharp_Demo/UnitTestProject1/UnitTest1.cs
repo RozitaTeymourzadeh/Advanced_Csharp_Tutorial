@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Mod05Demo01;
+using Mod06Demo02;
 // Make sure to give reference to the project that you want to test by right click on the Reference and add the relevant project
 namespace UnitTestProject1
 {

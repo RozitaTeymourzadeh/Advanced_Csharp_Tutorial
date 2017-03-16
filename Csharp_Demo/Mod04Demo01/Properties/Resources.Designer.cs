@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mod05Demo01.Properties
+namespace Mod06Demo02.Properties
 {
 
 
