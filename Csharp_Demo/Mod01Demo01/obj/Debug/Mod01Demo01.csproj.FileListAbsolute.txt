@@ -5,8 +5,6 @@ C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanc
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\App.g.cs
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01_MarkupCompile.cache
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01_MarkupCompile.lref
-C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\MainWindow.baml
-C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.g.resources
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.Properties.Resources.resources
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.csproj.GenerateResource.Cache
 C:\Users\Rozita.Teymourzadeh\Dropbox\Personal\Job Dec 2015\Neonode\Github\Advanced_Csharp_Tutorial\Csharp_Demo\Mod01Demo01\obj\Debug\Mod01Demo01.exe
