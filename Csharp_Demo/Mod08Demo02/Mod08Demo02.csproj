@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AD15E82-575F-44A3-A679-E9DDCDAA0D51}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mod08Demo02</RootNamespace>
+    <AssemblyName>Mod08Demo02</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.5.6.4\lib\net40\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Customers.svc" />
+    <Content Include="CustomersEDM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CustomersEDM.edmx</DependentUpon>
+      <LastGenOutput>CustomersEDM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CustomersEDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CustomersEDM.edmx</DependentUpon>
+      <LastGenOutput>CustomersEDM.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backupfile.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="backupfilegroup.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="backupmediafamily.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="backupmediaset.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="backupset.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.svc.cs">
+      <DependentUpon>Customers.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersEDM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersEDM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersEDM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersEDM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersEDM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="logmarkhistory.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_monitor_alert.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_monitor_error_detail.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_monitor_history_detail.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_monitor_primary.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_monitor_secondary.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_primaries.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_primary_databases.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_primary_secondaries.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_secondaries.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_secondary.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log_shipping_secondary_databases.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSdbm.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSdbms_datatype.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSdbms_datatype_mapping.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSdbms_map.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="msdb_version.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="restorefile.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="restorefilegroup.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="restorehistory.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sqlagent_info.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="suspect_pages.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysalert.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscachedcredential.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscategory.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_blobs_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_collection_items_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_collection_sets_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_collector_types_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_config_store_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_execution_log_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_execution_stats_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syscollector_tsql_query_collector.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdac_history_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdac_instances_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdbmaintplan.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdbmaintplan_databases.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdbmaintplan_history.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdbmaintplan_jobs.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdownloadlist.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysjob.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysjobactivity.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysjobhistory.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysjobschedule.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysjobserver.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysjobstep.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysjobstepslog.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_account.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_attachments.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_attachments_transfer.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_configuration.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_log.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_mailitems.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_principalprofile.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_profile.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_profileaccount.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_query_transfer.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_send_retries.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_server.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmail_servertype.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmaintplan_log.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmaintplan_logdetail.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmaintplan_subplans.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmanagement_shared_registered_servers_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysmanagement_shared_server_groups_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysnotification.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysoperator.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysoriginatingserver.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_conditions_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_configuration_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_facet_events.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_management_facets.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_object_sets_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_policies_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_policy_categories_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_policy_category_subscriptions_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_policy_execution_history_details_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_policy_execution_history_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_system_health_state_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_target_sets_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syspolicy_target_set_levels_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysproxy.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysproxylogin.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysproxysubsystem.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysschedule.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syssession.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysssislog.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysssispackage.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysssispackagefolder.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syssubsystem.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="systargetserver.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="systargetservergroup.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="systargetservergroupmember.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="systaskid.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_configuration_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_cpu_stage_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_dac_execution_statistics_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_session_statistics_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_smo_objects_to_collect_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_smo_properties_to_collect_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_smo_stage_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_mi_volumes_stage_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_aggregated_dac_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_aggregated_mi_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_computers_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_computer_cpu_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_configuration_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_cpu_utilization_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_dacs_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_dac_file_space_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_dac_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_databases_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_datafiles_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_filegroups_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_filegroups_with_policy_violations_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_health_policies_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_logfiles_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_managed_instances_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_mi_database_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_mi_file_space_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_mi_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_mi_volume_space_health_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_policy_check_conditions_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_policy_target_conditions_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_policy_violations_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_processing_state_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_space_utilization_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_supported_object_types_internal.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysutility_ucp_volumes_stub.cs">
+      <DependentUpon>CustomersEDM.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="CustomersEDM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CustomersEDM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="CustomersEDM.edmx.diagram">
+      <DependentUpon>CustomersEDM.edmx</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50267</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50267/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
