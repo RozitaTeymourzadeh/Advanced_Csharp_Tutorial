@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Runtime.Serialization.Json;
-
+/*Module 8: Lesson 1 Accessing Data Across the web */
 namespace Mod08Demo01
 {
     /// <summary>
@@ -35,7 +35,7 @@ namespace Mod08Demo01
             request.ContentType = "application/json";
             var response = request.GetResponse() as HttpWebResponse;
             var formatter = new DataContractJsonSerializer(typeof(Customers));
-            using (var stream = response.GetResponseStream())
+            using (var stream = response.GetResponseStream())// We using "using" to make sure close the stream. 
             {
                 var customers = formatter.ReadObject(stream) as Customers;
                 customerList.ItemsSource = customers;
